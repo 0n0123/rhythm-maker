@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <input name="beat" type="radio" id="march" value="4" checked>
+        <label for="march">4/4</label>
+        <input name="beat" type="radio" id="waltz" value="3">
+        <label for="waltz">3/4</label>
+    </header>
+    <div id="maker">
+        <div id="background">
+            <div class="quarter"></div>
+            <div class="quarter"></div>
+            <div class="quarter"></div>
+            <div class="quarter"></div>
+            <div class="quarter bar"></div>
+            <div class="quarter"></div>
+            <div class="quarter"></div>
+            <div class="quarter"></div>
+        </div>
+        <div id="notes"></div>
+    </div>
+    <div id="note-buttons">
+        <button class="note-button" id="dotted-half" data-value="360">𝅗𝅥𝅭</button>
+        <button class="note-button" id="half" data-value="240">𝅗𝅥</button>
+        <button class="note-button" id="dotted-quarter" data-value="180">𝅘𝅥𝅭</button>
+        <button class="note-button" id="quarter" data-value="120">𝅘𝅥</button>
+        <button class="note-button" id="eigth" data-value="60">𝅘𝅥𝅮</button>
+        <span>&nbsp;</span>
+        <button class="note-button" id="clear">🗑</button>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

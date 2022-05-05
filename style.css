@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Music&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji&family=Noto+Music&display=swap');
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    
+    --quarter-width: 8rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+}
+
+#maker {
+    width: calc(var(--quarter-width) * 8);
+    height: 8rem;
+    border: 1px solid gray;
+    position: relative;
+}
+
+#notes {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.note {
+    height: 100%;
+    border-radius: 1rem;
+    font-family: 'Noto Music', 'Noto Emoji', sans-serif;
+    font-size: 3rem;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    line-height: 8rem;
+    background-color: rgba(180, 200, 255, .6);
+    z-index: 1;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.quarter {
+    width: 8rem;
+    height: 100%;
+}
+
+.quarter+.quarter {
+    border-left: 1px dashed gray;
+}
+
+.quarter.bar {
+    border-left: 1px solid gray;
+}
+
+#note-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.note-button {
+    font-family: 'Noto Music', 'Noto Emoji', sans-serif;
+    font-size: 3rem;
+    display: block;
+    width: 5rem;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    background-color: gainsboro;
+    font-weight: bold;
+    display: block;
+    width: 8rem;
+    text-align: center;
+    cursor: pointer;
+    padding: .5rem 0;
+}
+
+input[type="radio"]:checked+label {
+    background-color: darkcyan;
+    color: white;
+}
